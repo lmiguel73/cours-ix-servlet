@@ -1,7 +1,6 @@
 package edu.formation.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,20 +34,19 @@ public class SessionServlet extends HttpServlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException
     {
-        // sortie du navigateur
-        PrintWriter out = response.getWriter();
-
         HttpSession session = request.getSession();
-        // si l'attribut identifiant est initialisé
-        if (session.getAttribute("id") != null)
+        // si le logout est demandé
+        if (
+            (request.getParameter("logout") != null)
+                    && request.getParameter("logout").equals("true")
+        )
         {
-            out.append("Utilisateur identifié : " + session.getAttribute("id"));
-        }
-        else
-        {
-            // out.append("Pas d'utilisateur authentifié");
+            // destruction de la session (invalidation)
+            session.invalidate();
             response.sendRedirect("session.jsp");
+            return;
         }
+        response.sendRedirect("session.jsp");
 
     }
 
@@ -61,7 +59,13 @@ public class SessionServlet extends HttpServlet
             throws ServletException, IOException
     {
         HttpSession session = request.getSession();
-        session.setAttribute("id", "toto");
+        String userName = request.getParameter("id");
+        // si pas de nom
+        if (userName.equals(""))
+        {
+            userName = "Anonymous";
+        }
+        session.setAttribute("id", userName);
         // forward vers nous-mêmes
         response.sendRedirect("session");
     }

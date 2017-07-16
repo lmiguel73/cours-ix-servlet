@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+  pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +7,22 @@
 <title>Michel est parmi nous !</title>
 </head>
 <body>
-	<form method="post" action="<%= request.getContextPath() %>/session">
-		<input type="submit" value="OK" />
-	</form>
+  <%
+      if (session.getAttribute("id") != null)
+      {
+          out.append("<p>Utilisateur identifié : " + session.getAttribute("id") + "</p>");
+          out.append("<a href=\"" + request.getContextPath()
+                  + "/session?logout=true\">Se déconnecter</a>");
+      }
+      else
+      {
+  %>
+  <form method="post" action="<%= request.getContextPath() %>/session">
+    <input name="id" type="text" placeholder="Nom d'utilisateur" /> <input
+      type="submit" value="Se connecter" />
+  </form>
+  <%
+      }
+  %>
 </body>
 </html>
