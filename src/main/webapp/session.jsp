@@ -7,7 +7,7 @@
 <title>Michel est parmi nous !</title>
 </head>
 <body>
-	<form method="post" action="session">
+	<form method="post" action="<%= request.getContextPath() %>/session">
 		<input type="submit" value="OK" />
 	</form>
 </body>
