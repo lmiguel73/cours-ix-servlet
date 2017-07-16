@@ -5,8 +5,10 @@
 <head>
 <meta charset=UTF-8>
 <title>Michel est parmi nous !</title>
+<%@include file="include/assets.jsp"%>
 </head>
 <body>
+  <%@include file="include/menu.jsp"%>
   <%
       if (session.getAttribute("id") != null)
       {
@@ -17,7 +19,7 @@
       else
       {
   %>
-  <form method="post" action="<%= request.getContextPath() %>/session">
+  <form method="post" action="<%=request.getContextPath()%>/session">
     <input name="id" type="text" placeholder="Nom d'utilisateur" /> <input
       type="submit" value="Se connecter" />
   </form>
