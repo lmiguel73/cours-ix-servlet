@@ -36,8 +36,8 @@ public class TestServlet extends HttpServlet
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         response.setContentType("text/html;charset=UTF-8");
-        response.getWriter().append("<p>Type mime de la requête :" + request.getContentType() + "</p>");
-        response.getWriter().append("<p>Protocole de la requête :" + request.getProtocol() + "</p>");
+        response.getWriter().append("<p>Type mime de la requÃªte :" + request.getContentType() + "</p>");
+        response.getWriter().append("<p>Protocole de la requÃªte :" + request.getProtocol() + "</p>");
         response.getWriter().append("<p>liste des parametres de la requete : </p>");
         for (Enumeration<String> e = request.getParameterNames(); e.hasMoreElements();)
         {
