@@ -59,13 +59,13 @@ public class SessionServlet extends HttpServlet
             throws ServletException, IOException
     {
         HttpSession session = request.getSession();
-        String userName = request.getParameter("id");
+        String userName = request.getParameter("username");
         // si pas de nom
         if (userName.equals(""))
         {
             userName = "Anonymous";
         }
-        session.setAttribute("id", userName);
+        session.setAttribute("username", userName);
         // forward vers nous-mêmes
         response.sendRedirect("session");
     }
