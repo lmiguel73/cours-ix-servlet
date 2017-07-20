@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Redirect and forward differences</title>
-<%@include file="include/assets.jsp"%>
+<%@include file="WEB-INF/include/assets.jsp"%>
 </head>
 <body>
-  <%@include file="include/menu.jsp"%>
+  <%@include file="WEB-INF/include/menu.jsp"%>
   <h1>Redirect and forward differences</h1>
   <form action="redirect">
     <input type="submit" value="Redirect" />

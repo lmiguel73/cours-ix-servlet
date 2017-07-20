@@ -5,10 +5,10 @@
 <head>
 <meta charset=UTF-8>
 <title>Michel est parmi nous !</title>
-<%@include file="include/assets.jsp"%>
+<%@include file="WEB-INF/include/assets.jsp"%>
 </head>
 <body>
-  <%@include file="include/menu.jsp"%>
+  <%@include file="WEB-INF/include/menu.jsp"%>
   <%
       if (session.getAttribute("username") != null)
       {

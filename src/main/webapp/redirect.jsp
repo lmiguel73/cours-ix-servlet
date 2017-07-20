@@ -5,10 +5,10 @@
 <head>
 <meta charset=UTF-8>
 <title>Redirected</title>
-<%@include file="include/assets.jsp"%>
+<%@include file="WEB-INF/include/assets.jsp"%>
 </head>
 <body>
-  <%@include file="include/menu.jsp"%>
+  <%@include file="WEB-INF/include/menu.jsp"%>
   <h1>Redirected :</h1>
   <h2>
     URI :
