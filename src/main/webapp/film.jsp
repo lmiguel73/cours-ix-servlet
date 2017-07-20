@@ -14,19 +14,26 @@
 <body class="container">
 	<h1 class="well">Détail du film sélectionné</h1>
 	<div class="col-md-12 jumbotron">
-	<div class="col-md-6">
-		<p>Film N° ${film.id}</p>
-		<p>Titre du film : ${film.nom}</p>
-		<p>Durée : ${film.duree} minutes</p>
-		<p>Année de sortie : ${film.annee}</p>
-		<div><a class="btn btn-primary btn-lg"  href="./film">Retour à la liste <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></a> 
-		
+		<div class="col-md-6">
+			<p>Film N° ${film.id}</p>
+			<p>Titre du film : ${film.nom}</p>
+			<p>Durée : ${film.duree} minutes</p>
+			<p>Année de sortie : ${film.annee}</p>
+			<p>
+				<a class="btn btn-primary btn-lg" href="./film">Retour à la
+					liste <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span>
+				</a>
+			</p>
+			<p>Synopsis
+			<br>Eminuit autem inter humilia supergressa iam impotentia fines
+				mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis
+				mors repentina..</p>
+		</div>
+		<div class="col-md-6">
+			<img alt="${film.nom}" class="img-responsive img-thumbnail"
+				src="img/${film.id}.jpg">
 		</div>
 	</div>
-	<div class="col-md-6">
-	<img alt="${film.nom}" class="img-responsive img-thumbnail" src="img/${film.id}.jpg">
-	</div>
-	</div>
-	
+
 </body>
 </html>
