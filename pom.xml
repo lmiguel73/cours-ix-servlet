@@ -36,5 +36,10 @@
   		<version>2.3.1</version>
   		<scope>provided</scope>
   	</dependency>
+  	<dependency>
+  		<groupId>edu.formation</groupId>
+  		<artifactId>cours-ix-data</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
 </project>
