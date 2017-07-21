@@ -24,16 +24,16 @@
 					liste <span class="glyphicon glyphicon-retweet" aria-hidden="true"></span>
 				</a>
 			</p>
-			<p>Synopsis
-			<br>Eminuit autem inter humilia supergressa iam impotentia fines
-				mediocrium delictorum nefanda Clematii cuiusdam Alexandrini nobilis
-				mors repentina..</p>
+			
+			
 		</div>
 		<div class="col-md-6">
 			<img alt="${film.nom}" class="img-responsive img-thumbnail"
 				src="img/${film.id}.jpg">
 		</div>
 	</div>
-
+	<h2>Synopsis "${film.nom}"</h2>
+<c:import var = "data" url = "WEB-INF/include/${film.id}.jsp"/>
+      <c:out value = "${data}"/>
 </body>
 </html>
